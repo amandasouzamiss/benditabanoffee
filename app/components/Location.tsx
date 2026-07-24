@@ -8,7 +8,7 @@ import {
   MessageCircle,
   Navigation,
 } from "lucide-react";
-import { FaInstagram } from "react-icons/fa";
+import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { site } from "../data/site";
 
@@ -130,7 +130,9 @@ export default function Location() {
   href={site.whatsappUrl}
   target="_blank"
   rel="noopener noreferrer"
+  className="inline-flex min-h-14 items-center justify-center gap-3 rounded-full border border-white/20 bg-white/[0.04] px-6 py-4 font-bold text-white backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-[#25D366]/60 hover:bg-white/10 hover:text-[#25D366]"
 >
+  <FaWhatsapp size={18} />
   WhatsApp
 </Link>
               </div>
