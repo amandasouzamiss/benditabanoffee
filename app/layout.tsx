@@ -16,7 +16,7 @@ const manrope = Manrope({
 export const metadata: Metadata = {
   title: "Bendita Banoffee | A Casa da Banoffee",
   description:
-    "Banoffees, cafés e sobremesas especiais em Nova Prata. Conheça a experiência Bendita Banoffee.",
+"Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata.",
 };
 
 export default function RootLayout({

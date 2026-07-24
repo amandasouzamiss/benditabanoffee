@@ -22,8 +22,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 max-w-xs text-sm leading-7 text-white/55">
-              Banoffees, cafés e momentos especiais para deixar o seu dia ainda
-              mais bendito.
+            "Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata."
             </p>
           </div>
 

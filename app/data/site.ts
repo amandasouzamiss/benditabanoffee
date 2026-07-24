@@ -1,28 +1,36 @@
 export const site = {
   name: "Bendita Banoffee",
+
   slogan: "A Casa da Banoffee",
 
   description:
-    "Banoffees, cafés e sobremesas especiais para deixar o seu dia ainda mais bendito.",
+    "Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata.",
 
   about:
-    "A Bendita nasceu para transformar cafés, sobremesas e encontros em momentos especiais. Cada produto é preparado com cuidado, ingredientes selecionados e aquele toque que torna cada experiência inesquecível.",
+    "A Bendita nasceu para transformar cafés, sobremesas e encontros em momentos especiais. Cada produto é preparado artesanalmente, com ingredientes selecionados e aquele cuidado que faz cada visita ser única.",
 
   instagram: "https://www.instagram.com/benditabanoffeenp/",
 
   ordersUrl: "https://benditabanoffee.saipos.com/",
-  whatsappUrl: "#",
-  mapsUrl: "https://www.google.com/maps/place/Bendita+Banoffee/data=!4m2!3m1!1s0x0:0x87f917e239eb60f7?sa=X&ved=1t:2428&ictx=111",
 
-  address: "Tv. Ângelo Lorencet, 31 - Centro, Nova Prata - RS",
+  whatsappUrl: "https://wa.me/5554996852328",
+
+  mapsUrl:
+    "https://www.google.com/maps/place/Bendita+Banoffee/data=!4m2!3m1!1s0x0:0x87f917e239eb60f7?sa=X&ved=1t:2428&ictx=111",
+
+  mapsEmbed:
+    "https://www.google.com/maps?q=Travessa%20%C3%82ngelo%20Lorencet%2027,%20Centro,%20Nova%20Prata,%20RS&output=embed",
+
+  address:
+    "Bendita Banoffee\nTravessa Ângelo Lorencet, 27\nCentro • Nova Prata/RS",
 
   hours: [
-    "Segunda, Quarta a sexta: 13:30 as 19:30",
-    "Sábado e domingo: 14:00 as 20:00",
-    "Terça-feira: Fechado"
+    "Segunda, quarta, quinta e sexta • 13h30 às 19h30",
+    "Sábado e domingo • 14h às 20h",
+    "Terça-feira • Fechado",
   ],
 
-  phone: "Telefone a confirmar",
+  phone: "(54) 99685-2328",
 };
 
 export const navigation = [
@@ -38,46 +46,53 @@ export const highlights = [
   {
     title: "Banoffees",
     description:
-      "A combinação perfeita entre banana, doce de leite, creme e muito sabor.",
+      "Banoffees artesanais preparadas com banana, doce de leite, creme e muito carinho.",
     image: "/images/banoffee.jpg",
   },
   {
     title: "Cafés",
     description:
-      "Cafés preparados para acompanhar seus melhores momentos durante o dia.",
+      "Cafés especiais preparados para acompanhar cada momento do seu dia.",
     image: "/images/cafe.jpg",
   },
   {
     title: "Sobremesas",
     description:
-      "Doces especiais, preparados com cuidado para deixar qualquer ocasião mais feliz.",
+      "Sobremesas artesanais que transformam qualquer pausa em uma experiência.",
     image: "/images/sobremesa.jpg",
   },
   {
     title: "Salgados",
     description:
-      "Opções saborosas para uma pausa rápida, um café ou um encontro especial.",
+      "Opções salgadas perfeitas para um café, almoço leve ou encontro especial.",
     image: "/images/salgados.jpg",
   },
   {
     title: "Bebidas geladas",
     description:
-      "Bebidas cremosas, refrescantes e cheias de personalidade.",
+      "Bebidas cremosas e refrescantes para todas as estações.",
     image: "/images/bebidas.jpg",
   },
+  {
+  title: "Encomendas",
+  description:
+    "Tortas e sobremesas especiais para aniversários, encontros e celebrações.",
+  image: "/images/orders.jpg",
+},
 ];
+
 
 export const reviews = [
   {
-    name: "Cliente Bendita",
-    text: "Um ambiente lindo, acolhedor e com sobremesas maravilhosas.",
+    name: "Amanda Souza",
+    text: "Ambiente aconchegante, atendimento excelente e a melhor banoffee da região.",
   },
   {
-    name: "Cliente Bendita",
-    text: "A banoffee é incrível e o atendimento faz toda a diferença.",
+    name: "Maria S.",
+    text: "Tudo muito bonito, cafés deliciosos e sobremesas impecáveis.",
   },
   {
-    name: "Cliente Bendita",
-    text: "Lugar perfeito para tomar um café e aproveitar com calma.",
+    name: "JoãoP",
+    text: "Um lugar perfeito para conversar, relaxar e aproveitar um bom café.",
   },
 ];
