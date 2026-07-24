@@ -1,26 +1,55 @@
 "use client";
 
 import Link from "next/link";
-import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
+import { FaWhatsapp } from "react-icons/fa";
 import { site } from "../data/site";
 
 export default function WhatsAppButton() {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 1, duration: 0.4 }}
-      className="fixed bottom-5 right-5 z-50"
+      className="fixed bottom-6 right-6 z-50"
+      initial={{ scale: 0 }}
+      animate={{ scale: 1 }}
+      transition={{
+        type: "spring",
+        stiffness: 260,
+        damping: 20,
+      }}
     >
-      <Link
-        href={site.whatsappUrl}
-        target="_blank"
-        aria-label="Falar com a Bendita pelo WhatsApp"
-        className="flex h-14 w-14 items-center justify-center rounded-full bg-[#9C521B] text-white shadow-[0_16px_45px_rgba(72,44,27,0.35)] transition hover:scale-105 hover:bg-[#482C1B]"
+      <motion.div
+        animate={{
+          scale: [1, 1.08, 1],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+        }}
       >
-        <MessageCircle size={25} />
-      </Link>
+        <Link
+          href={site.whatsappUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Conversar pelo WhatsApp"
+          className="flex h-16 w-16 items-center justify-center rounded-full bg-[#25D366] text-white shadow-2xl transition-all duration-300 hover:scale-110 hover:bg-[#20c45a]"
+        >
+          <FaWhatsapp size={34} />
+        </Link>
+      </motion.div>
+
+      <motion.div
+        className="absolute inset-0 rounded-full border-2 border-[#25D366]"
+        animate={{
+          scale: [1, 1.7],
+          opacity: [0.4, 0],
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeOut",
+        }}
+      />
     </motion.div>
   );
 }
