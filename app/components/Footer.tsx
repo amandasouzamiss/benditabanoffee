@@ -22,7 +22,7 @@ export default function Footer() {
             </Link>
 
             <p className="mt-6 max-w-xs text-sm leading-7 text-white/55">
-            "Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata."
+            Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata.
             </p>
           </div>
 
@@ -53,7 +53,7 @@ export default function Footer() {
                 className="flex items-center gap-3 text-sm text-white/55 transition hover:text-[#F1DCC9]"
               >
                 <FaInstagram size={17} />
-                @benditabanoffeenp
+                benditabanoffeenp
               </Link>
 
               <Link
