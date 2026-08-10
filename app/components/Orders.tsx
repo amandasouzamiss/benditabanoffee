@@ -67,7 +67,7 @@ export default function Orders() {
               </p>
 
               <Link
-                href={site.ordersUrl}
+                href={site.ordersWhatsappUrl}
                 className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#FEEFE1] px-7 py-4 font-bold text-[#482C1B] transition hover:bg-white"
               >
                 Solicitar encomenda

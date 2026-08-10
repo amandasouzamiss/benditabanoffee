@@ -15,6 +15,9 @@ export const site = {
 
   whatsappUrl: "https://wa.me/5554996852328",
 
+  ordersWhatsappUrl:
+  "https://wa.me/5551997771220?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda%20na%20Bendita%20Banoffee.",
+
   mapsUrl:
     "https://www.google.com/maps/place/Bendita+Banoffee/data=!4m2!3m1!1s0x0:0x87f917e239eb60f7?sa=X&ved=1t:2428&ictx=111",
 
