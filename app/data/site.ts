@@ -11,7 +11,7 @@ export const site = {
 
   instagram: "https://www.instagram.com/benditabanoffeenp/",
 
-  ordersUrl: "https://benditabanoffee.saipos.com/",
+  ordersUrl: "https://pedidos.benditabanoffee.com.br/",
 
   whatsappUrl: "https://wa.me/5554996852328",
 
