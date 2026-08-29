@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { cestas, site } from "../data/site";
+import { cestas } from "../data/site";
 
 export default function CestasHero() {
   return (
@@ -58,12 +58,10 @@ export default function CestasHero() {
 
           <div className="mt-9">
             <Link
-              href={site.cestasWhatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/cestas/encomendar"
               className="group inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#FEEFE1] px-7 py-4 font-bold text-[#482C1B] shadow-[0_18px_50px_rgba(30,15,8,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-white"
             >
-              Encomendar pelo WhatsApp
+              Montar minha encomenda
               <ArrowUpRight
                 size={19}
                 className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

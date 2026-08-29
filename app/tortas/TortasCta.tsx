@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
-import { site } from "../data/site";
 
 export default function TortasCta() {
   return (
@@ -28,17 +27,15 @@ export default function TortasCta() {
           </h2>
 
           <p className="max-w-lg text-sm leading-7 text-white/65 sm:text-base">
-            Fale com a gente pelo WhatsApp, escolha o sabor e combine data,
-            tamanho e detalhes da sua encomenda.
+            Monte sua encomenda em poucos passos — sabor, tamanho, data e
+            detalhes — e finalize a conversa pelo WhatsApp.
           </p>
 
           <Link
-            href={site.tortasWhatsappUrl}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/tortas/encomendar"
             className="group mt-2 inline-flex min-h-14 items-center justify-center gap-3 rounded-full bg-[#FEEFE1] px-7 py-4 font-bold text-[#482C1B] transition duration-300 hover:-translate-y-0.5 hover:bg-white"
           >
-            Encomendar pelo WhatsApp
+            Montar minha encomenda
             <ArrowUpRight
               size={19}
               className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"

@@ -13,16 +13,11 @@ export const site = {
 
   ordersUrl: "https://pedidos.benditabanoffee.com.br/",
 
+  // WhatsApp de atendimento geral (botão flutuante, seção de localização).
   whatsappUrl: "https://wa.me/5554996852328",
 
-  ordersWhatsappUrl:
-  "https://wa.me/5551997771220?text=Olá!%20Gostaria%20de%20fazer%20uma%20encomenda%20na%20Bendita%20Banoffee.",
-
-  cestasWhatsappUrl:
-    "https://wa.me/5551997771220?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20as%20cestas%20de%20café%20da%20manhã%20da%20Bendita%20Banoffee.",
-
-  tortasWhatsappUrl:
-    "https://wa.me/5551997771220?text=Olá!%20Gostaria%20de%20encomendar%20uma%20torta%20da%20Bendita%20Banoffee.",
+  // Número (só dígitos, com DDI) usado pelo configurador de encomendas.
+  ordersWhatsappNumber: "5551997771220",
 
   mapsUrl:
     "https://www.google.com/maps/place/Bendita+Banoffee/data=!4m2!3m1!1s0x0:0x87f917e239eb60f7?sa=X&ved=1t:2428&ictx=111",
@@ -184,6 +179,86 @@ export const cestas = {
     "/images/cestas/cesta-6.jpg",
   ],
 };
+
+// ————————————————————————————————————————————————
+// Configurador de encomendas (tortas e cestas)
+// ————————————————————————————————————————————————
+
+// Antecedência mínima, em dias, para cada tipo de encomenda.
+export const orderLeadDays = {
+  tortas: 3,
+  cestas: 2,
+};
+
+// Dias da semana em que a loja não retira/entrega encomendas (0 = domingo).
+export const orderClosedWeekdays = [2]; // terça-feira
+
+export const tortaSizes = [
+  {
+    id: "pequena",
+    label: "Pequena",
+    detail: "Aproximadamente 12 a 15 fatias",
+  },
+  {
+    id: "media",
+    label: "Média",
+    detail: "Aproximadamente 20 a 25 fatias",
+  },
+  {
+    id: "grande",
+    label: "Grande",
+    detail: "Aproximadamente 30 a 35 fatias",
+  },
+  {
+    id: "indefinido",
+    label: "Ainda não sei",
+    detail: "A gente te ajuda a escolher pelo WhatsApp",
+  },
+];
+
+export const cestaOccasions = [
+  "Aniversário",
+  "Café da manhã romântico",
+  "Dia das Mães / Dia dos Pais",
+  "Agradecimento ou mimo",
+  "Boas-vindas",
+  "Outra ocasião",
+];
+
+export const cestaSizes = [
+  {
+    id: "p",
+    label: "Cesta P",
+    detail:
+      "Para 1 pessoa — pães, um tipo de frio e queijo, uma fruta, um doce e bebida individual.",
+  },
+  {
+    id: "m",
+    label: "Cesta M",
+    detail:
+      "Para 2 pessoas — variedade maior de frios e queijos, frutas, doces e bebida para dividir.",
+  },
+  {
+    id: "g",
+    label: "Cesta G",
+    detail:
+      "Para 2 a 4 pessoas ou presente especial — seleção completa, com espumante ou vinho e mais mimos.",
+  },
+  {
+    id: "indefinido",
+    label: "Ainda não sei",
+    detail: "Conte a ocasião e a gente sugere o tamanho ideal.",
+  },
+];
+
+export const cestaExtras = [
+  { id: "vinho", label: "Vinho" },
+  { id: "espumante", label: "Espumante" },
+  { id: "suco", label: "Suco de uva integral" },
+  { id: "cartao", label: "Cartão escrito à mão" },
+  { id: "flores", label: "Arranjo de flores" },
+  { id: "personalizado", label: "Item personalizado" },
+];
 
 export const reviews = [
   {

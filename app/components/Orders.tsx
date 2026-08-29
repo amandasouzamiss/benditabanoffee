@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, CakeSlice, Gift, PartyPopper } from "lucide-react";
 import { motion } from "framer-motion";
-import { site } from "../data/site";
 
 const orderTypes = [
   {
@@ -62,15 +61,16 @@ export default function Orders() {
               </h2>
 
               <p className="mt-8 max-w-xl text-base leading-8 text-white/70">
-                Encomende tortas, banoffees e sobremesas para aniversários,
+                Encomende tortas e cestas de café da manhã para aniversários,
                 encontros, presentes e momentos que merecem ser celebrados.
+                Monte seu pedido em poucos passos.
               </p>
 
               <Link
-                href={site.ordersWhatsappUrl}
+                href="/encomendar"
                 className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#FEEFE1] px-7 py-4 font-bold text-[#482C1B] transition hover:bg-white"
               >
-                Solicitar encomenda
+                Fazer uma encomenda
                 <ArrowUpRight size={19} />
               </Link>
             </motion.div>
