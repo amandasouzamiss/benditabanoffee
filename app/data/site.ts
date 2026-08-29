@@ -38,13 +38,11 @@ export const site = {
 };
 
 export const navigation = [
-  { label: "Início", href: "/#inicio" },
   { label: "A Bendita", href: "/#sobre" },
   { label: "Destaques", href: "/#destaques" },
   { label: "Cestas", href: "/cestas" },
   { label: "Tortas", href: "/tortas" },
-  { label: "Experiência", href: "/#experiencia" },
-  { label: "Encomendas", href: "/#encomendas" },
+  { label: "Encomendas", href: "/encomendar" },
   { label: "Localização", href: "/#localizacao" },
 ];
 
@@ -260,17 +258,3 @@ export const cestaExtras = [
   { id: "personalizado", label: "Item personalizado" },
 ];
 
-export const reviews = [
-  {
-    name: "Amanda Souza",
-    text: "Ambiente aconchegante, atendimento excelente e a melhor banoffee da região.",
-  },
-  {
-    name: "Maria S.",
-    text: "Tudo muito bonito, cafés deliciosos e sobremesas impecáveis.",
-  },
-  {
-    name: "JoãoP",
-    text: "Um lugar perfeito para conversar, relaxar e aproveitar um bom café.",
-  },
-];
