@@ -84,15 +84,6 @@ export default function Highlights() {
                   <p className="mt-3 max-w-md text-sm leading-7 text-white/70">
                     {item.description}
                   </p>
-
-                  <div className="mt-5 flex items-center gap-2 text-sm font-bold text-[#F1DCC9] opacity-0 transition duration-300 group-hover:opacity-100">
-                    Conhecer opções
-
-                    <ArrowUpRight
-                      size={17}
-                      className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                    />
-                  </div>
                 </div>
               </motion.article>
             );
