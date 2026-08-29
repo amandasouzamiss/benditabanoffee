@@ -375,7 +375,7 @@ export function SummaryCard({
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="group inline-flex min-h-13 w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 font-bold text-white shadow-[0_16px_40px_rgba(37,211,102,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20c45a] sm:w-auto"
+          className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 font-bold text-white shadow-[0_16px_40px_rgba(37,211,102,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20c45a] sm:w-auto"
         >
           Enviar encomenda pelo WhatsApp
           <ArrowUpRight
