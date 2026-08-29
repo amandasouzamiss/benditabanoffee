@@ -39,7 +39,7 @@ export default function WhatsAppButton() {
       </motion.div>
 
       <motion.div
-        className="absolute inset-0 rounded-full border-2 border-[#25D366]"
+        className="pointer-events-none absolute inset-0 rounded-full border-2 border-[#25D366]"
         animate={{
           scale: [1, 1.7],
           opacity: [0.4, 0],
