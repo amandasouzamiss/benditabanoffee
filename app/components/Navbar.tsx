@@ -13,7 +13,7 @@ export default function Navbar() {
     <header className="fixed inset-x-0 top-0 z-50 border-b border-[#482C1B]/10 bg-[#FEEFE1]/90 backdrop-blur-xl">
       <div className="container-site flex h-20 items-center justify-between">
         <Link
-          href="#inicio"
+          href="/#inicio"
           aria-label="Ir para o início"
           className="relative block h-14 w-36 shrink-0"
         >
@@ -27,12 +27,12 @@ export default function Navbar() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-5 xl:gap-7 lg:flex">
           {navigation.map((item) => (
             <Link
               key={item.label}
               href={item.href}
-              className="text-sm font-semibold text-[#482C1B]/75 transition hover:text-[#9C521B]"
+              className="whitespace-nowrap text-sm font-semibold text-[#482C1B]/75 transition hover:text-[#9C521B]"
             >
               {item.label}
             </Link>

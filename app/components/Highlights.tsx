@@ -25,7 +25,7 @@ export default function Highlights() {
 
             <h2 className="mt-5 max-w-3xl text-[2.9rem] font-semibold leading-[0.95] tracking-[-0.04em] text-[#482C1B] sm:text-6xl lg:text-7xl">
               Escolhas para todos
-              <span className="mt-2 block font-serif italic font-normal text-[#9C521B]">
+              <span className="mt-2 block font-title italic font-normal text-[#9C521B]">
                 os seus momentos
               </span>
             </h2>

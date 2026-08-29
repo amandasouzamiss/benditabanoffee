@@ -11,8 +11,8 @@ export default function Footer() {
       <div className="container-site py-14">
         <div className="grid gap-12 border-b border-white/10 pb-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Link href="#inicio" className="inline-block leading-none">
-              <span className="block font-[var(--font-title)] text-4xl font-semibold">
+            <Link href="/#inicio" className="inline-block leading-none">
+              <span className="block font-title text-4xl font-semibold">
                 Bendita
               </span>
 
