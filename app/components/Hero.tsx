@@ -74,7 +74,7 @@ export default function Hero() {
             className="max-w-[11ch] text-[3.8rem] font-semibold leading-[0.88] tracking-[-0.055em] sm:text-7xl md:text-8xl lg:text-[7.25rem] xl:text-[8rem]"
           >
             A Casa da
-            <span className="mt-2 block font-serif italic font-normal tracking-[-0.035em] text-[#F1DCC9] sm:mt-3">
+            <span className="mt-2 block font-title italic font-normal tracking-[-0.035em] text-[#F1DCC9] sm:mt-3">
               Banoffee
             </span>
           </motion.h1>

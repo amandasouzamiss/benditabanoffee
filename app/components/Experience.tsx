@@ -38,6 +38,7 @@ export default function Experience() {
             <Link
               href={site.instagram}
               target="_blank"
+              rel="noopener noreferrer"
               className="mt-9 inline-flex items-center gap-3 border-b border-[#F1DCC9]/40 pb-2 font-bold text-[#F1DCC9] transition hover:border-[#F1DCC9]"
             >
               Acompanhe pelo Instagram
@@ -57,6 +58,7 @@ export default function Experience() {
                 src="/images/experience-1.jpg"
                 alt="Ambiente da Bendita Banoffee"
                 fill
+                sizes="(max-width: 1024px) 45vw, 28vw"
                 className="object-cover"
               />
             </motion.div>
@@ -73,6 +75,7 @@ export default function Experience() {
                   src="/images/experience-2.jpg"
                   alt="Café e sobremesa Bendita"
                   fill
+                  sizes="(max-width: 1024px) 45vw, 28vw"
                   className="object-cover"
                 />
               </motion.div>
@@ -88,6 +91,7 @@ export default function Experience() {
                   src="/images/experience-3.jpg"
                   alt="Momentos na Bendita Banoffee"
                   fill
+                  sizes="(max-width: 1024px) 45vw, 28vw"
                   className="object-cover"
                 />
               </motion.div>

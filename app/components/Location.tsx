@@ -40,7 +40,7 @@ export default function Location() {
 
               <h2 className="mt-5 max-w-xl text-[2.75rem] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-6xl">
                 Um cantinho especial
-                <span className="mt-2 block font-serif italic font-normal text-[#F1DCC9]">
+                <span className="mt-2 block font-title italic font-normal text-[#F1DCC9]">
                   esperando por você
                 </span>
               </h2>

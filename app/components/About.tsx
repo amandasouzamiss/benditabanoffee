@@ -77,7 +77,7 @@ export default function About() {
               transition={{ duration: 0.7, delay: 0.25 }}
               className="relative -mt-10 ml-auto mr-4 max-w-[270px] rounded-[1.75rem] bg-[#482C1B] p-6 text-white shadow-[0_25px_60px_rgba(72,44,27,0.28)] sm:absolute sm:-bottom-8 sm:-right-7 sm:mt-0 sm:mr-0 sm:p-7"
             >
-              <span className="font-[var(--font-title)] text-4xl font-semibold text-[#F1DCC9] sm:text-5xl">
+              <span className="font-title text-4xl font-semibold text-[#F1DCC9] sm:text-5xl">
                 Bendita
               </span>
 
@@ -116,7 +116,7 @@ export default function About() {
               className="mt-5 max-w-3xl text-[2.9rem] font-semibold leading-[0.95] tracking-[-0.04em] text-[#482C1B] sm:text-6xl lg:text-[4.4rem]"
             >
               Feita para deixar
-              <span className="mt-2 block font-serif italic font-normal text-[#9C521B]">
+              <span className="mt-2 block font-title italic font-normal text-[#9C521B]">
                 o seu dia mais doce
               </span>
             </motion.h2>
