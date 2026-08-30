@@ -138,34 +138,38 @@ export const tortas = [
 ];
 
 export const cestas = {
-  priceFrom: "R$ 180,00",
-  priceTo: "R$ 350,00",
+  priceNote: "Consulte tamanhos e valores",
   description:
-    "Cestas montadas à mão com pães artesanais, frios, queijos, frutas frescas e mimos especiais — perfeitas para presentear ou celebrar uma manhã especial.",
+    "Cestas artesanais para presentear e celebrar — aniversário, uma data a dois, um agradecimento ou um presente corporativo. Montadas à mão, com curadoria de sabores, texturas e aromas, e entregues de manhã, à tarde ou à noite.",
   includes: [
     {
-      title: "Pães, croissants e mini bolos",
-      description: "Recém-preparados, para acompanhar o café da manhã.",
+      title: "Pães, croissants e farináceos",
+      description: "Recém-preparados — a base que sustenta a degustação.",
     },
     {
-      title: "Frios e queijos selecionados",
-      description: "Presunto, salame e queijos escolhidos com cuidado.",
+      title: "Queijos e charcutarias selecionadas",
+      description:
+        "Uma seleção pensada para dar personalidade à experiência.",
     },
     {
       title: "Frutas frescas da estação",
-      description: "Uvas, morangos e outras frutas selecionadas.",
+      description:
+        "O melhor da estação, para limpar o paladar e equilibrar os sabores.",
     },
     {
-      title: "Cookies, chocolates e doces",
-      description: "Um toque doce para completar a experiência.",
+      title: "Chocolates, doces e espalháveis",
+      description:
+        "Um mimo açucarado, com geleia, doce de leite ou manteiga para o croissant.",
     },
     {
-      title: "Vinho ou suco de uva",
-      description: "Para brindar o momento, do jeito que preferir.",
+      title: "Drip coffee e bebida para brindar",
+      description:
+        "Café coado de sachê e mais suco de uva integral, vinho ou espumante.",
     },
     {
-      title: "Montagem cuidadosa e decorada",
-      description: "Cada cesta é montada à mão, com carinho e capricho.",
+      title: "Montagem cuidadosa e especial",
+      description:
+        "Cesta artesanal e personalizada, mesclando alturas, texturas, cores e aromas para os cinco sentidos.",
     },
   ],
   gallery: [
@@ -216,7 +220,8 @@ export const tortaSizes = [
 
 export const cestaOccasions = [
   "Aniversário",
-  "Café da manhã romântico",
+  "Data romântica",
+  "Presente corporativo",
   "Dia das Mães / Dia dos Pais",
   "Agradecimento ou mimo",
   "Boas-vindas",

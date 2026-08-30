@@ -34,14 +34,14 @@ export default function CestasHero() {
             <span className="h-px w-8 bg-[#F1DCC9]/60 sm:w-10" />
 
             <span className="text-[0.68rem] font-bold uppercase tracking-[0.32em] text-[#F1DCC9] sm:text-xs">
-              Cestas Benditas
+              Cesta de café da manhã
             </span>
           </div>
 
           <h1 className="mt-5 text-[2.9rem] font-semibold leading-[0.95] tracking-[-0.04em] sm:text-6xl lg:text-7xl">
-            Um café da manhã
+            Um presente afetivo
             <span className="mt-2 block font-title italic font-normal text-[#F1DCC9]">
-              digno de celebração
+              para toda celebração
             </span>
           </h1>
 
@@ -50,9 +50,9 @@ export default function CestasHero() {
           </p>
 
           <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/[0.08] px-6 py-3 backdrop-blur-sm">
-            <span className="text-sm text-white/70">Preços</span>
-            <span className="font-title text-xl font-semibold text-[#F1DCC9]">
-              {cestas.priceFrom} — {cestas.priceTo}
+            <span className="text-sm text-white/70">Valores</span>
+            <span className="font-title text-lg font-semibold text-[#F1DCC9] sm:text-xl">
+              {cestas.priceNote}
             </span>
           </div>
 
