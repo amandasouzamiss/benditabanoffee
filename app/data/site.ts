@@ -179,6 +179,7 @@ export const cestas = {
     "/images/cestas/cesta-4.jpg",
     "/images/cestas/cesta-5.jpg",
     "/images/cestas/cesta-6.jpg",
+    "/images/cestas/cesta-7.jpg",
   ],
 };
 
