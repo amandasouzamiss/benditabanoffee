@@ -11,11 +11,8 @@ export default function Reviews() {
             Quem vive, recomenda
           </span>
 
-          <h2 className="mx-auto mt-5 text-5xl font-semibold leading-[0.95] text-[#482C1B] sm:text-6xl lg:text-7xl">
-            Experiências que deixam
-            <span className="block font-title italic font-normal text-[#9C521B]">
-              boas lembranças
-            </span>
+          <h2 className="mx-auto mt-5 max-w-xl text-5xl font-semibold leading-[1.02] text-[#482C1B] sm:text-6xl">
+            Experiências que ficam na memória
           </h2>
 
           <p className="mt-7 text-base leading-8 text-[#482C1B]/70">

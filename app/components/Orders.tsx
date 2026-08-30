@@ -53,10 +53,10 @@ export default function Orders() {
                 Encomendas
               </span>
 
-              <h2 className="mt-5 max-w-2xl text-5xl font-semibold leading-[0.95] text-white sm:text-6xl lg:text-7xl">
-                Um sabor especial
-                <span className="block italic text-[#F1DCC9]">
-                  para cada celebração
+              <h2 className="mt-5 max-w-2xl text-5xl font-semibold leading-[1.02] text-white sm:text-6xl lg:text-7xl">
+                Um sabor especial para{" "}
+                <span className="italic font-normal text-[#F1DCC9]">
+                  cada celebração
                 </span>
               </h2>
 

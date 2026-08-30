@@ -35,12 +35,10 @@ export default function Hero() {
         />
       </div>
 
-      {/* Camadas de contraste */}
-      <div className="absolute inset-0 -z-10 bg-[#2A160D]/30" />
+      {/* Camadas de contraste — mais leves à direita para revelar a foto */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#2A160D]/92 via-[#2A160D]/60 to-[#2A160D]/30 md:to-transparent" />
 
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#321A0F]/95 via-[#482C1B]/75 to-[#482C1B]/10 md:from-[#321A0F]/95 md:via-[#482C1B]/70 md:to-transparent" />
-
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#321A0F] via-transparent to-[#321A0F]/20" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#321A0F]/80 via-transparent to-transparent" />
 
       {/* Luz suave decorativa */}
       <div className="pointer-events-none absolute -left-28 top-1/3 -z-10 h-80 w-80 rounded-full bg-[#F1DCC9]/10 blur-[120px]" />

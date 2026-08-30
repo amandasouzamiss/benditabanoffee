@@ -24,9 +24,8 @@ export default function Experience() {
               Experiência Bendita
             </span>
 
-            <h2 className="mt-5 text-5xl font-semibold leading-[0.95] sm:text-6xl lg:text-7xl">
-              Seu momento merece
-              <span className="block italic text-[#F1DCC9]">ser Bendito</span>
+            <h2 className="mt-5 font-title text-5xl font-medium italic leading-[1] tracking-[-0.01em] text-[#F1DCC9] sm:text-6xl lg:text-7xl">
+              Seu momento merece ser Bendito
             </h2>
 
             <p className="mt-8 max-w-xl text-base leading-8 text-white/65 sm:text-lg">
