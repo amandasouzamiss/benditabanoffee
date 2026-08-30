@@ -5,7 +5,7 @@ import CestasGallery from "./CestasGallery";
 import CestasCta from "./CestasCta";
 
 const description =
-  "Cestas de café da manhã montadas à mão pela Bendita Banoffee, com pães, frios, queijos, frutas frescas e mimos especiais. Peça pelo WhatsApp.";
+  "Cestas de café da manhã da Bendita Banoffee: um presente afetivo para aniversário, data romântica, agradecimento ou presente corporativo. Montadas à mão, entregues a qualquer hora. Peça pelo WhatsApp.";
 
 export const metadata: Metadata = {
   title: "Cestas de Café da Manhã | Bendita Banoffee",

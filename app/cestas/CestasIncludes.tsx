@@ -1,10 +1,17 @@
 "use client";
 
-import { Coffee, Cookie, Grape, Heart, UtensilsCrossed, Wine } from "lucide-react";
+import {
+  Coffee,
+  Cookie,
+  Croissant,
+  Grape,
+  Heart,
+  UtensilsCrossed,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import { cestas } from "../data/site";
 
-const icons = [Coffee, UtensilsCrossed, Grape, Cookie, Wine, Heart];
+const icons = [Croissant, UtensilsCrossed, Grape, Cookie, Coffee, Heart];
 
 export default function CestasIncludes() {
   return (
@@ -27,8 +34,8 @@ export default function CestasIncludes() {
           </h2>
 
           <p className="mt-6 text-base leading-8 text-[#482C1B]/65">
-            O conteúdo pode variar conforme o tamanho e a ocasião — fale com a
-            gente para montar a combinação ideal.
+            O conteúdo varia conforme o tamanho e a ocasião. Abaixo, o que
+            costuma compor uma cesta Bendita.
           </p>
         </div>
 
