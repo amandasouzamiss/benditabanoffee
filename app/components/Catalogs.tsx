@@ -21,6 +21,14 @@ const catalogs = [
     image: "/images/banoffee.jpg",
     href: "/tortas",
   },
+  {
+    title: "Eventos",
+    description:
+      "No nosso espaço ou no local da sua festa — aniversários, casamentos e mais.",
+    price: "Faça seu evento conosco",
+    image: "/images/about.jpg",
+    href: "/eventos",
+  },
 ];
 
 export default function Catalogs() {
@@ -43,18 +51,19 @@ export default function Catalogs() {
             <h2 className="mt-5 max-w-2xl text-[2.6rem] font-semibold leading-[0.95] tracking-[-0.04em] text-[#482C1B] sm:text-6xl">
               Peça já a sua
               <span className="mt-2 block font-title italic font-normal text-[#9C521B]">
-                cesta ou torta favorita
+                cesta, torta ou evento
               </span>
             </h2>
           </div>
 
           <p className="max-w-md text-base leading-8 text-[#482C1B]/65">
-            Confira todos os sabores, o que vem em cada cesta e faça sua
-            encomenda direto pelo WhatsApp.
+            Confira todos os sabores, o que vem em cada cesta e como
+            organizamos o seu evento — e faça sua encomenda direto pelo
+            WhatsApp.
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:gap-6">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:mt-14 lg:grid-cols-3 lg:gap-6">
           {catalogs.map((item, index) => (
             <motion.div
               key={item.title}
@@ -71,7 +80,7 @@ export default function Catalogs() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
                 />
 
