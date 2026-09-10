@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const description =
-  "Encomende tortas e cestas de café da manhã da Bendita Banoffee. Monte seu pedido em poucos passos e finalize pelo WhatsApp.";
+  "Encomende tortas, cestas de café da manhã ou monte seu evento com a Bendita Banoffee. Monte seu pedido em poucos passos e finalize pelo WhatsApp.";
 
 export const metadata: Metadata = {
   title: "Fazer uma encomenda | Bendita Banoffee",
@@ -33,6 +33,13 @@ const options = [
     image: "/images/cestas/cesta-2.jpg",
     href: "/cestas/encomendar",
   },
+  {
+    title: "Evento",
+    description:
+      "No nosso espaço ou no local da sua festa — conte o tipo de evento e a data.",
+    image: "/images/about.jpg",
+    href: "/eventos/encomendar",
+  },
 ];
 
 export default function EncomendarPage() {
@@ -59,7 +66,7 @@ export default function EncomendarPage() {
           </p>
         </div>
 
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:gap-6">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {options.map((option) => (
             <Link
               key={option.title}
@@ -70,7 +77,7 @@ export default function EncomendarPage() {
                 src={option.image}
                 alt={option.title}
                 fill
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
               />
 

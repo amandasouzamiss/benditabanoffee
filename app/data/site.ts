@@ -42,6 +42,7 @@ export const navigation = [
   { label: "Destaques", href: "/#destaques" },
   { label: "Cestas", href: "/cestas" },
   { label: "Tortas", href: "/tortas" },
+  { label: "Eventos", href: "/eventos" },
   { label: "Encomendas", href: "/encomendar" },
   { label: "Localização", href: "/#localizacao" },
 ];
@@ -183,14 +184,40 @@ export const cestas = {
   ],
 };
 
+export const eventos = {
+  description:
+    "Do espaço da Bendita ao local da sua celebração — organizamos aniversários, casamentos, formaturas e eventos corporativos com o sabor e o cuidado da casa.",
+  options: [
+    {
+      title: "No nosso espaço",
+      description:
+        "Reserve o espaço da Bendita em Nova Prata para o seu evento, com toda a estrutura e o clima acolhedor da casa.",
+    },
+    {
+      title: "No seu evento",
+      description:
+        "Levamos tortas, cestas, doces e salgados até o local da sua celebração, em Nova Prata e região.",
+    },
+  ],
+  occasions: [
+    "Aniversário",
+    "Casamento",
+    "Formatura",
+    "Evento corporativo",
+    "Chá de bebê ou revelação",
+    "Confraternização",
+  ],
+};
+
 // ————————————————————————————————————————————————
-// Configurador de encomendas (tortas e cestas)
+// Configurador de encomendas (tortas, cestas e eventos)
 // ————————————————————————————————————————————————
 
 // Antecedência mínima, em dias, para cada tipo de encomenda.
 export const orderLeadDays = {
   tortas: 3,
   cestas: 2,
+  eventos: 7,
 };
 
 // Dias da semana em que a loja não retira/entrega encomendas (0 = domingo).
@@ -262,5 +289,43 @@ export const cestaExtras = [
   { id: "cartao", label: "Cartão escrito à mão" },
   { id: "flores", label: "Arranjo de flores" },
   { id: "personalizado", label: "Item personalizado" },
+];
+
+export const eventTypes = [
+  "Aniversário",
+  "Casamento",
+  "Formatura",
+  "Evento corporativo",
+  "Chá de bebê ou revelação",
+  "Outro",
+];
+
+export const eventLocations = [
+  {
+    id: "espaco",
+    label: "No espaço da Bendita",
+    detail: "Travessa Ângelo Lorencet, 27 — Centro, Nova Prata",
+  },
+  {
+    id: "externo",
+    label: "Vocês vão até o local do evento",
+    detail: "Em Nova Prata e região",
+  },
+];
+
+export const eventGuestRanges = [
+  { id: "ate20", label: "Até 20 convidados" },
+  { id: "20a50", label: "20 a 50 convidados" },
+  { id: "50a100", label: "50 a 100 convidados" },
+  { id: "mais100", label: "Mais de 100 convidados" },
+];
+
+export const eventServices = [
+  { id: "mesa-doces", label: "Mesa de doces" },
+  { id: "tortas", label: "Tortas" },
+  { id: "cestas", label: "Cestas de mimos" },
+  { id: "salgados", label: "Salgados" },
+  { id: "bebidas", label: "Bebidas" },
+  { id: "decoracao", label: "Decoração temática" },
 ];
 
