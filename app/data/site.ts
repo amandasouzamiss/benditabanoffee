@@ -143,7 +143,7 @@ export const cestas = {
     "Cestas artesanais para presentear e celebrar — aniversário, uma data a dois, um agradecimento ou um presente corporativo. Montadas à mão, com curadoria de sabores, texturas e aromas, e entregues de manhã, à tarde ou à noite.",
   includes: [
     {
-      title: "Pães, croissants e farináceos",
+      title: "Pães, croissants, bolos e biscoitos",
       description: "Recém-preparados — a base que sustenta a degustação.",
     },
     {
@@ -164,7 +164,7 @@ export const cestas = {
     {
       title: "Drip coffee e bebida para brindar",
       description:
-        "Café coado de sachê e mais suco de uva integral, vinho ou espumante.",
+        "Café coado de sachê e mais sucos, vinho ou espumante.",
     },
     {
       title: "Montagem cuidadosa e especial",
@@ -258,7 +258,7 @@ export const cestaSizes = [
 export const cestaExtras = [
   { id: "vinho", label: "Vinho" },
   { id: "espumante", label: "Espumante" },
-  { id: "suco", label: "Suco de uva integral" },
+  { id: "suco", label: "Suco integral" },
   { id: "cartao", label: "Cartão escrito à mão" },
   { id: "flores", label: "Arranjo de flores" },
   { id: "personalizado", label: "Item personalizado" },
