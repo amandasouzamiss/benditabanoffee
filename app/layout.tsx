@@ -16,12 +16,14 @@ const manrope = Manrope({
   variable: "--font-body",
 });
 
+const title = "Bendita Banoffee | A Casa da Banoffee em Nova Prata";
+
 const description =
-  "Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata.";
+  "Banoffees artesanais, cafés especiais, sobremesas e um ambiente acolhedor em Nova Prata, RS.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://benditabanoffee.com.br"),
-  title: "Bendita Banoffee | A Casa da Banoffee",
+  title,
   description,
   alternates: {
     canonical: "/",
@@ -31,7 +33,7 @@ export const metadata: Metadata = {
     locale: "pt_BR",
     url: "/",
     siteName: "Bendita Banoffee",
-    title: "Bendita Banoffee | A Casa da Banoffee",
+    title,
     description,
     images: [
       {
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bendita Banoffee | A Casa da Banoffee",
+    title,
     description,
     images: ["/images/hero.jpg"],
   },
