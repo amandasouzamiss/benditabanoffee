@@ -11,8 +11,8 @@ export default function EventosHero() {
     <section className="relative isolate overflow-hidden bg-[#482C1B] pb-20 pt-32 text-white sm:pb-24 sm:pt-40">
       <div className="absolute inset-0 -z-20">
         <Image
-          src="/images/about.jpg"
-          alt="Espaço da Bendita Banoffee em Nova Prata"
+          src="/images/eventos/evento-1.jpg"
+          alt="Espaço da Bendita Banoffee decorado para um evento"
           fill
           priority
           sizes="100vw"
