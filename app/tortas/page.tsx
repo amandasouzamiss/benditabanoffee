@@ -3,15 +3,17 @@ import TortasHero from "./TortasHero";
 import TortasMenu from "./TortasMenu";
 import TortasCta from "./TortasCta";
 
+const title = "Tortas Artesanais em Nova Prata | Bendita Banoffee";
+
 const description =
-  "Conheça os 8 sabores de tortas da Bendita Banoffee: Banoffee, Cheese Cake, Uvanoffe, Choconoffe, Holandesa, Chocolate com Morango, Maçã com Canela e Limão. Peça pelo WhatsApp.";
+  "Tortas artesanais em Nova Prata, RS: 8 sabores da Bendita Banoffee — Banoffee, Cheese Cake, Uvanoffe, Choconoffe, Holandesa, Chocolate com Morango, Maçã com Canela e Limão. Peça pelo WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Tortas | Bendita Banoffee",
+  title,
   description,
   alternates: { canonical: "/tortas" },
   openGraph: {
-    title: "Tortas | Bendita Banoffee",
+    title,
     description,
     url: "/tortas",
     images: [{ url: "/images/banoffee.jpg", alt: "Torta de banoffee Bendita Banoffee" }],

@@ -4,15 +4,17 @@ import EventosOptions from "./EventosOptions";
 import EventosGallery from "./EventosGallery";
 import EventosCta from "./EventosCta";
 
+const title = "Festas e Eventos em Nova Prata | Bendita Banoffee";
+
 const description =
-  "Faça seu evento com a Bendita Banoffee: no nosso espaço em Nova Prata ou no local da sua celebração. Aniversários, casamentos, formaturas e eventos corporativos. Peça pelo WhatsApp.";
+  "Festas e eventos em Nova Prata, RS: no espaço da Bendita Banoffee ou no local da sua celebração. Aniversários, casamentos, formaturas e eventos corporativos. Peça pelo WhatsApp.";
 
 export const metadata: Metadata = {
-  title: "Faça seu evento conosco | Bendita Banoffee",
+  title,
   description,
   alternates: { canonical: "/eventos" },
   openGraph: {
-    title: "Faça seu evento conosco | Bendita Banoffee",
+    title,
     description,
     url: "/eventos",
     images: [
