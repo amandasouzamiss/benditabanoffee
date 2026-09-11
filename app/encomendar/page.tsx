@@ -37,7 +37,7 @@ const options = [
     title: "Evento",
     description:
       "No nosso espaço ou no local da sua festa — conte o tipo de evento e a data.",
-    image: "/images/about.jpg",
+    image: "/images/eventos/evento-1.jpg",
     href: "/eventos/encomendar",
   },
 ];

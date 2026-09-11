@@ -13,7 +13,10 @@ export const metadata: Metadata = {
     description,
     url: "/eventos/encomendar",
     images: [
-      { url: "/images/about.jpg", alt: "Espaço da Bendita Banoffee em Nova Prata" },
+      {
+        url: "/images/eventos/evento-1.jpg",
+        alt: "Espaço da Bendita Banoffee decorado para um evento",
+      },
     ],
   },
 };

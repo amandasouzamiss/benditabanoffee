@@ -26,7 +26,7 @@ const catalogs = [
     description:
       "No nosso espaço ou no local da sua festa — aniversários, casamentos e mais.",
     price: "Faça seu evento conosco",
-    image: "/images/about.jpg",
+    image: "/images/eventos/evento-3.jpg",
     href: "/eventos",
   },
 ];

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import EventosHero from "./EventosHero";
 import EventosOptions from "./EventosOptions";
+import EventosGallery from "./EventosGallery";
 import EventosCta from "./EventosCta";
 
 const description =
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
     description,
     url: "/eventos",
     images: [
-      { url: "/images/about.jpg", alt: "Espaço da Bendita Banoffee em Nova Prata" },
+      {
+        url: "/images/eventos/evento-3.jpg",
+        alt: "Evento realizado pela Bendita Banoffee",
+      },
     ],
   },
 };
@@ -25,6 +29,7 @@ export default function EventosPage() {
     <>
       <EventosHero />
       <EventosOptions />
+      <EventosGallery />
       <EventosCta />
     </>
   );

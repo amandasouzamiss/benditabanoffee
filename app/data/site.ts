@@ -207,6 +207,13 @@ export const eventos = {
     "Chá de bebê ou revelação",
     "Confraternização",
   ],
+  gallery: [
+    "/images/eventos/evento-1.jpg",
+    "/images/eventos/evento-2.jpg",
+    "/images/eventos/evento-3.jpg",
+    "/images/eventos/evento-4.jpg",
+    "/images/eventos/evento-5.jpg",
+  ],
 };
 
 // ————————————————————————————————————————————————
