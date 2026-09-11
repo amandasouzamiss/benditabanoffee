@@ -25,7 +25,7 @@ export default function EventosGallery() {
 
         <div className="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:mt-14 lg:grid-cols-3">
           {eventos.gallery.map((image, index) => {
-            const large = index === 0 || index === 3;
+            const large = index === 0 || index === 3 || index === 7;
 
             return (
               <motion.div

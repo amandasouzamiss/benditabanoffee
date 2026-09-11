@@ -210,8 +210,12 @@ export const eventos = {
   gallery: [
     "/images/eventos/evento-1.jpg",
     "/images/eventos/evento-2.jpg",
+    "/images/eventos/evento-6.jpg",
     "/images/eventos/evento-3.jpg",
+    "/images/eventos/evento-7.jpg",
     "/images/eventos/evento-4.jpg",
+    "/images/eventos/evento-9.jpg",
+    "/images/eventos/evento-8.jpg",
     "/images/eventos/evento-5.jpg",
   ],
 };
