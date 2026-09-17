@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { Cormorant_Garamond, Manrope } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import WhatsAppButton from "./components/WhatsAppButton";
+import { site } from "./data/site";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -67,6 +69,8 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
       </body>
+
+      <GoogleAnalytics gaId={site.googleAnalyticsId} />
     </html>
   );
 }

@@ -19,6 +19,9 @@ export const site = {
   // Número (só dígitos, com DDI) usado pelo configurador de encomendas.
   ordersWhatsappNumber: "5551997771220",
 
+  // ID de métricas do Google Analytics 4 (formato G-XXXXXXXXXX).
+  googleAnalyticsId: "G-1L20DPTG7R",
+
   mapsUrl:
     "https://www.google.com/maps/place/Bendita+Banoffee/data=!4m2!3m1!1s0x0:0x87f917e239eb60f7?sa=X&ved=1t:2428&ictx=111",
 
