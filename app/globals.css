@@ -48,6 +48,14 @@ a {
   color: var(--white);
 }
 
+/* O widget da Kyvo (kyvo.dev.br/selo.js) se anexa sozinho no fim de <body>,
+   fora do rodapé, com pouquíssimo respiro próprio — dá esse espaço aqui. */
+kyvo-selo {
+  display: block;
+  background: var(--background);
+  padding-block: 1.75rem 2.25rem;
+}
+
 .container-site {
   width: min(100% - 2rem, 1280px);
   margin-inline: auto;
