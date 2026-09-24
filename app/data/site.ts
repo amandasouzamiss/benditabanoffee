@@ -107,7 +107,7 @@ export const tortas = [
     name: "Torta de Maçã com Canela",
     description:
       "Maçãs frescas e canela sobre uma massa crocante e amanteigada.",
-    price: "R$ 140,00",
+    price: "R$ 179,90",
   },
   {
     name: "Torta Uvanoffe",
@@ -137,7 +137,7 @@ export const tortas = [
     name: "Torta de Limão",
     description:
       "Creme de limão fresquinho sobre base crocante, no equilíbrio perfeito entre doce e cítrico.",
-    price: "R$ 114,90",
+    price: "R$ 179,90",
   },
 ];
 
