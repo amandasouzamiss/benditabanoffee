@@ -52,7 +52,7 @@ export default function CestasHero() {
           <div className="mt-8 inline-flex items-center gap-3 rounded-full border border-white/20 bg-white/[0.08] px-6 py-3 backdrop-blur-sm">
             <span className="text-sm text-white/70">Valores</span>
             <span className="font-title text-lg font-semibold text-[#F1DCC9] sm:text-xl">
-              {cestas.priceNote}
+              {cestas.priceFrom} a {cestas.priceTo}
             </span>
           </div>
 
