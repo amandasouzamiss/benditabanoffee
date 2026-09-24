@@ -21,6 +21,7 @@ import {
   StepHeading,
   StepNav,
   SummaryCard,
+  TextArea,
   TextInput,
 } from "../../components/order/OrderKit";
 
@@ -42,6 +43,7 @@ export default function CestaConfigurator() {
   const [reference, setReference] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
+  const [notes, setNotes] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
 
@@ -91,6 +93,7 @@ export default function CestaConfigurator() {
         `📅 ${delivery === "entrega" ? "Entrega" : "Retirada"}: ${formatDatePtBr(date)}${
           time ? ` às ${time}` : ""
         }`,
+        notes && `💬 Observações: ${notes}`,
         "",
         `👤 ${name}`,
         `📱 ${phone}`,
@@ -103,6 +106,7 @@ export default function CestaConfigurator() {
       delivery,
       date,
       time,
+      notes,
       name,
       phone,
     ],
@@ -116,6 +120,7 @@ export default function CestaConfigurator() {
       label: delivery === "entrega" ? "Entrega" : "Retirada",
       value: `${deliveryText}\n${formatDatePtBr(date)}${time ? ` • ${time}` : ""}`,
     },
+    notes && { label: "Observações", value: notes },
     { label: "Contato", value: `${name}\n${phone}` },
   ].filter(Boolean) as Array<{ label: string; value: string }>;
 
@@ -202,6 +207,15 @@ export default function CestaConfigurator() {
               </Field>
             </div>
           )}
+          <div className="mt-5">
+            <Field label="Observações" optional>
+              <TextArea
+                placeholder="É surpresa? Mensagem para o cartão, restrição de item…"
+                value={notes}
+                onChange={(e) => setNotes(e.target.value)}
+              />
+            </Field>
+          </div>
           <StepNav onBack={back} onNext={next} />
         </Step>
       )}
@@ -279,7 +293,7 @@ export default function CestaConfigurator() {
                   onChange={(e) => setDate(e.target.value)}
                 />
               </Field>
-              <Field label="Horário aproximado" optional>
+              <Field label="Horário">
                 <TextInput
                   type="time"
                   value={time}
@@ -299,7 +313,11 @@ export default function CestaConfigurator() {
             onBack={back}
             onNext={next}
             nextDisabled={
-              !delivery || !addressComplete || !date || Boolean(dateError)
+              !delivery ||
+              !addressComplete ||
+              !date ||
+              !time ||
+              Boolean(dateError)
             }
           />
         </Step>
