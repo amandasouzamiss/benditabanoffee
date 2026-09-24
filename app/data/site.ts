@@ -110,13 +110,13 @@ export const tortas = [
     price: "R$ 179,90",
   },
   {
-    name: "Torta Uvanoffe",
+    name: "Torta Uvanoffee",
     description:
       "Nossa banoffee em uma versão especial, com uvas frescas para um toque surpreendente.",
     price: "R$ 240,90",
   },
   {
-    name: "Torta Choconoffe",
+    name: "Torta Choconoffee",
     description:
       "O encontro da banoffee com o chocolate: intensa, cremosa e irresistível.",
     price: "R$ 189,90",
