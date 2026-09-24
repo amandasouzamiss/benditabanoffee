@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Script from "next/script";
 import { MapPin, ShoppingBag } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
 import { navigation, site } from "../data/site";
@@ -107,6 +108,8 @@ export default function Footer() {
   </div>
 </div>
       </div>
+
+      <Script src="https://kyvo.dev.br/selo.js" strategy="afterInteractive" />
     </footer>
   );
 }
