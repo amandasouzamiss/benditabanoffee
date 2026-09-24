@@ -96,15 +96,6 @@ export default function Footer() {
 
   <div className="flex flex-col items-start gap-1 sm:items-end">
     <p>A Casa da Banoffee</p>
-
-    <Link
-      href="https://bpresultados.com.br"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="transition hover:text-[#F1DCC9]"
-    >
-      Desenvolvido por <span className="font-semibold">BP Resultados</span>
-    </Link>
   </div>
 </div>
       </div>
