@@ -17,7 +17,8 @@ export const site = {
   whatsappUrl: "https://wa.me/5554996852328",
 
   // Número (só dígitos, com DDI) usado pelo configurador de encomendas.
-  ordersWhatsappNumber: "5551997771220",
+  // Mesmo número de site.whatsappUrl — padronizado em todo o site.
+  ordersWhatsappNumber: "5554996852328",
 
   // ID de métricas do Google Analytics 4 (formato G-XXXXXXXXXX).
   googleAnalyticsId: "G-1L20DPTG7R",
