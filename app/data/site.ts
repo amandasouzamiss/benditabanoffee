@@ -142,7 +142,8 @@ export const tortas = [
 ];
 
 export const cestas = {
-  priceNote: "Consulte tamanhos e valores",
+  priceFrom: "R$ 130,00",
+  priceTo: "R$ 350,00",
   description:
     "Cestas artesanais para presentear e celebrar — aniversário, uma data a dois, um agradecimento ou um presente corporativo. Montadas à mão, com curadoria de sabores, texturas e aromas, e entregues de manhã, à tarde ou à noite.",
   includes: [

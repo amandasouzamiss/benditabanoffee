@@ -4,12 +4,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { cestas } from "../data/site";
+
 const catalogs = [
   {
     title: "Cestas de Café da Manhã",
     description:
       "Um presente afetivo para celebrar — montado à mão, com curadoria de sabores.",
-    price: "Consulte tamanhos e valores",
+    price: `A partir de ${cestas.priceFrom}`,
     image: "/images/cestas/cesta-2.jpg",
     href: "/cestas",
   },
