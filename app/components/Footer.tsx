@@ -94,8 +94,9 @@ export default function Footer() {
     © {currentYear} Bendita Banoffee. Todos os direitos reservados.
   </p>
 
-  <div className="flex flex-col items-start gap-1 sm:items-end">
-    <p>A Casa da Banoffee</p>
+  <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-5">
+    <kyvo-selo data-alinhar="direita" />
+    <p className="order-first sm:order-none">A Casa da Banoffee</p>
   </div>
 </div>
       </div>
