@@ -5,6 +5,9 @@ import Link from "next/link";
 import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { site } from "../data/site";
+import { RosaRibbon } from "./OutubroRosa";
+
+const rosa = site.outubroRosa;
 
 const fadeUp = {
   hidden: {
@@ -40,8 +43,16 @@ export default function Hero() {
 
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#321A0F]/80 via-transparent to-transparent" />
 
+      {rosa && (
+        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-[#a3345f]/35 via-[#d9568a]/10 to-transparent" />
+      )}
+
       {/* Luz suave decorativa */}
-      <div className="pointer-events-none absolute -left-28 top-1/3 -z-10 h-80 w-80 rounded-full bg-[#F1DCC9]/10 blur-[120px]" />
+      <div
+        className={`pointer-events-none absolute -left-28 top-1/3 -z-10 h-80 w-80 rounded-full blur-[120px] ${
+          rosa ? "bg-[#d9568a]/25" : "bg-[#F1DCC9]/10"
+        }`}
+      />
 
       <div className="container-site flex min-h-[680px] items-center py-16 sm:py-20 md:min-h-[calc(100vh-5rem)]">
         <motion.div
@@ -53,6 +64,17 @@ export default function Hero() {
           }}
           className="w-full max-w-4xl"
         >
+          {rosa && (
+            <motion.div
+              variants={fadeUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#fbe3ea]/35 bg-[#d9568a]/30 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#fde8ef] backdrop-blur-md sm:text-xs"
+            >
+              <RosaRibbon className="h-4 w-4" />
+              Outubro Rosa
+            </motion.div>
+          )}
+
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -72,7 +94,9 @@ export default function Hero() {
             className="max-w-[11ch] text-[3.8rem] font-semibold leading-[0.88] tracking-[-0.055em] sm:text-7xl md:text-8xl lg:text-[7.25rem] xl:text-[8rem]"
           >
             A Casa da
-            <span className="mt-2 block font-title italic font-normal tracking-[-0.035em] text-[#F1DCC9] sm:mt-3">
+            <span className={`mt-2 block font-title italic font-normal tracking-[-0.035em] sm:mt-3 ${
+                rosa ? "text-[#f9c6d6]" : "text-[#F1DCC9]"
+              }`}>
               Banoffee
             </span>
           </motion.h1>
