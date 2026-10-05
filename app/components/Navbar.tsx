@@ -62,6 +62,10 @@ export default function Navbar() {
         </button>
       </div>
 
+      {site.outubroRosa && (
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#fbe3ea] via-[#d9568a] to-[#fbe3ea]" />
+      )}
+
       {menuOpen && (
         <div className="border-t border-[#482C1B]/10 bg-[#FEEFE1] shadow-lg lg:hidden">
           <nav className="container-site flex flex-col py-6">
