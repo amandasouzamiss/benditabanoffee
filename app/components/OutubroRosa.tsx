@@ -8,14 +8,13 @@ export function RosaRibbon({ className }: { className?: string }) {
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="2"
+      strokeWidth="2.2"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"
       className={className}
     >
-      <path d="M12 13 7.5 21.5M12 13l4.5 8.5" />
-      <path d="M12 13C8 9 6.5 7 6.5 5.2 6.5 3.5 7.8 2.5 9.2 2.5 10.9 2.5 12 3.9 12 5.7c0-1.8 1.1-3.2 2.8-3.2 1.4 0 2.7 1 2.7 2.7C17.5 7 16 9 12 13Z" />
+      <path d="M7 22C9 17 12 13.5 14 9.5 15.2 7 14.6 3 12 3 9.4 3 8.8 7 10 9.5 12 13.5 15 17 17 22" />
     </svg>
   );
 }
