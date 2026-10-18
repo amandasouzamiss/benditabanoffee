@@ -100,7 +100,8 @@ export const combos = [
     weekday: 1,
     day: "Segunda",
     title: "Frete grátis",
-    description: "Peça pelo nosso cardápio online e receba sem pagar a entrega.",
+    description:
+      "Peça pelo nosso cardápio online e receba sem pagar a entrega em pedidos acima de R$ 40,00.",
     price: null,
     hours: null,
   },
