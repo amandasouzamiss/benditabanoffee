@@ -94,6 +94,42 @@ export const highlights = [
 ];
 
 
+// Combos da semana (home). weekday: 0 = domingo … 6 = sábado.
+export const combos = [
+  {
+    weekday: 1,
+    day: "Segunda",
+    title: "Frete grátis",
+    description: "Peça pelo nosso cardápio online e receba sem pagar a entrega.",
+    price: null,
+    hours: null,
+  },
+  {
+    weekday: 3,
+    day: "Quarta",
+    title: "Suco de laranja + Torta de limão",
+    description: "Uma fatia da nossa torta de limão com suco de laranja.",
+    price: "R$ 19,90",
+    hours: null,
+  },
+  {
+    weekday: 4,
+    day: "Quinta",
+    title: "Pão de queijo + Espresso",
+    description: "O clássico da pausa da tarde: pão de queijo quentinho e espresso.",
+    price: "R$ 9,90",
+    hours: null,
+  },
+  {
+    weekday: 5,
+    day: "Sexta",
+    title: "Croissant + Soda italiana",
+    description: "Happy hour da Bendita para começar o fim de semana.",
+    price: "R$ 24,90",
+    hours: "17h30 às 19h30",
+  },
+];
+
 export const tortas = [
   {
     name: "Torta de Banoffee",
