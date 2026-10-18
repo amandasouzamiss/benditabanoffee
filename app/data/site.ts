@@ -83,7 +83,7 @@ export const highlights = [
     title: "Bebidas geladas",
     description:
       "Bebidas cremosas e refrescantes para todas as estações.",
-    image: "/images/bebidas.jpg",
+    image: "/images/bebidas-geladas.jpg",
   },
   {
   title: "Encomendas",
