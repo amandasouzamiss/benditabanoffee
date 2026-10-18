@@ -1,6 +1,7 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { combos, site } from "../data/site";
@@ -23,8 +24,43 @@ export default function Combos() {
   );
 
   return (
-    <section id="combos" className="section-padding bg-[#FEEFE1]">
-      <div className="container-site">
+    <section
+      id="combos"
+      className="section-padding relative overflow-hidden bg-[#FEEFE1]"
+    >
+      {/* Elementos ilustrados da identidade visual */}
+      <div aria-hidden="true" className="pointer-events-none hidden md:block">
+        <Image
+          src="/images/marca/coracao.png"
+          alt=""
+          width={216}
+          height={240}
+          className="h-auto absolute right-[6%] top-14 w-20 rotate-12 opacity-90 lg:w-24"
+        />
+        <Image
+          src="/images/marca/colher.png"
+          alt=""
+          width={65}
+          height={240}
+          className="h-auto absolute right-[22%] top-10 w-8 rotate-[24deg] lg:w-10"
+        />
+        <Image
+          src="/images/marca/grao-cafe.png"
+          alt=""
+          width={222}
+          height={240}
+          className="h-auto absolute bottom-10 left-[5%] w-14 rotate-[20deg] lg:w-16"
+        />
+        <Image
+          src="/images/marca/chantilly.png"
+          alt=""
+          width={240}
+          height={236}
+          className="h-auto absolute bottom-8 right-[4%] w-20 lg:w-24"
+        />
+      </div>
+
+      <div className="container-site relative">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <div>
             <div className="flex items-center gap-3">
