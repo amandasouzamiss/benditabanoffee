@@ -40,8 +40,12 @@ export const site = {
 
   phone: "(54) 99685-2328",
 
-  // Tema de Outubro Rosa na home. Mudar para false em 01/11.
-  outubroRosa: true,
+  // Tema de Outubro Rosa na home.
+  outubroRosa: false,
+
+  // Tema de Halloween (faixa no menu, selo no topo e seção do evento com a
+  // Wizard). Mudar para false em 01/11.
+  halloween: true,
 };
 
 export const navigation = [
