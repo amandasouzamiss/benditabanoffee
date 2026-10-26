@@ -6,8 +6,10 @@ import { ArrowDown, ArrowUpRight, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { site } from "../data/site";
 import { RosaRibbon } from "./OutubroRosa";
+import { Pumpkin } from "./Halloween";
 
 const rosa = site.outubroRosa;
+const halloween = site.halloween;
 
 const fadeUp = {
   hidden: {
@@ -47,10 +49,18 @@ export default function Hero() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-[#a3345f]/35 via-[#d9568a]/10 to-transparent" />
       )}
 
+      {halloween && (
+        <div className="absolute inset-0 -z-10 bg-gradient-to-tr from-[#3A2238]/60 via-[#D9711C]/15 to-transparent" />
+      )}
+
       {/* Luz suave decorativa */}
       <div
         className={`pointer-events-none absolute -left-28 top-1/3 -z-10 h-80 w-80 rounded-full blur-[120px] ${
-          rosa ? "bg-[#d9568a]/25" : "bg-[#F1DCC9]/10"
+          rosa
+            ? "bg-[#d9568a]/25"
+            : halloween
+              ? "bg-[#D9711C]/30"
+              : "bg-[#F1DCC9]/10"
         }`}
       />
 
@@ -75,6 +85,18 @@ export default function Hero() {
             </motion.div>
           )}
 
+          {halloween && (
+            <motion.a
+              href="#halloween"
+              variants={fadeUp}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-5 inline-flex items-center gap-2.5 rounded-full border border-[#F2A25C]/40 bg-[#3A2238]/60 px-4 py-2 text-[0.68rem] font-bold uppercase tracking-[0.22em] text-[#FCD9B4] backdrop-blur-md transition hover:bg-[#3A2238]/80 sm:text-xs"
+            >
+              <Pumpkin className="h-4 w-4" />
+              Halloween na Bendita · 31/10
+            </motion.a>
+          )}
+
           <motion.div
             variants={fadeUp}
             transition={{ duration: 0.6, ease: "easeOut" }}
@@ -95,7 +117,11 @@ export default function Hero() {
           >
             A Casa da
             <span className={`mt-2 block font-title italic font-normal tracking-[-0.035em] sm:mt-3 ${
-                rosa ? "text-[#f9c6d6]" : "text-[#F1DCC9]"
+                rosa
+                  ? "text-[#f9c6d6]"
+                  : halloween
+                    ? "text-[#F2A25C]"
+                    : "text-[#F1DCC9]"
               }`}>
               Banoffee
             </span>

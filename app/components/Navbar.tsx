@@ -66,6 +66,10 @@ export default function Navbar() {
         <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#fbe3ea] via-[#d9568a] to-[#fbe3ea]" />
       )}
 
+      {site.halloween && (
+        <span className="pointer-events-none absolute inset-x-0 bottom-0 h-[3px] bg-gradient-to-r from-[#3A2238] via-[#D9711C] to-[#3A2238]" />
+      )}
+
       {menuOpen && (
         <div className="border-t border-[#482C1B]/10 bg-[#FEEFE1] shadow-lg lg:hidden">
           <nav className="container-site flex flex-col py-6">

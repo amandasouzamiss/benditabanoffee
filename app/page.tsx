@@ -7,6 +7,7 @@ import Orders from "./components/Orders";
 import Reviews from "./components/Reviews";
 import Location from "./components/Location";
 import OutubroRosa from "./components/OutubroRosa";
+import Halloween from "./components/Halloween";
 import Combos from "./components/Combos";
 import { site } from "./data/site";
 
@@ -15,6 +16,7 @@ export default function Home() {
     <>
       <Hero />
       {site.outubroRosa && <OutubroRosa />}
+      {site.halloween && <Halloween />}
       <Combos />
       <About />
       <Highlights />
