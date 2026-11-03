@@ -91,7 +91,10 @@ export default function Footer() {
 
         <div className="flex flex-col gap-4 pt-7 text-xs text-white/40 sm:flex-row sm:items-center sm:justify-between">
   <p>
-    © {currentYear} Bendita Banoffee. Todos os direitos reservados.
+    © {currentYear} Bendita Banoffee. Todos os direitos reservados.{" "}
+    <Link href="/privacidade" className="underline transition hover:text-[#F1DCC9]">
+      Política de Privacidade
+    </Link>
   </p>
 
   <div className="flex flex-col items-start gap-1 sm:flex-row sm:items-center sm:gap-5">
