@@ -33,7 +33,7 @@ export async function POST(request: NextRequest) {
   const { mensagens, status } = lerWebhook(payload);
   try {
     for (const m of mensagens) await receberMensagem(m);
-    for (const s of status) await atualizarStatusMensagem(s.waId, s.status);
+    for (const s of status) await atualizarStatusMensagem(s.waId, s.status, s.erro);
   } catch (error) {
     // Responde 200 mesmo assim para a Meta não reenviar em loop; o erro fica no log.
     console.error("[whatsapp webhook]", error);

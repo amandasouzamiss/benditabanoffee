@@ -90,7 +90,7 @@ export type MensagemRecebida = {
   opcaoId?: string; // id da opção do menu, quando for resposta interativa
 };
 
-export type StatusRecebido = { waId: string; status: string };
+export type StatusRecebido = { waId: string; status: string; erro?: string };
 
 type WebhookBody = {
   entry?: {
@@ -112,7 +112,7 @@ type WebhookBody = {
           document?: { caption?: string; filename?: string };
           location?: { name?: string; address?: string };
         }[];
-        statuses?: { id: string; status: string }[];
+        statuses?: { id: string; status: string; errors?: { code: number; title?: string }[] }[];
       };
     }[];
   }[];
@@ -153,7 +153,10 @@ export function lerWebhook(body: WebhookBody) {
         });
       }
 
-      for (const s of value.statuses ?? []) status.push({ waId: s.id, status: s.status });
+      for (const s of value.statuses ?? []) {
+        const erro = s.errors?.[0];
+        status.push({ waId: s.id, status: s.status, erro: erro && `${erro.title ?? "erro"} (${erro.code})` });
+      }
     }
   }
   return { mensagens, status };

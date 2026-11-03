@@ -26,6 +26,8 @@ CREATE TABLE IF NOT EXISTS contatos (
   criado_em TIMESTAMPTZ NOT NULL DEFAULT now(),
   atualizado_em TIMESTAMPTZ NOT NULL DEFAULT now()
 );
+-- Número exatamente como o WhatsApp informa (às vezes sem o 9), é para ele que respondemos.
+ALTER TABLE contatos ADD COLUMN IF NOT EXISTS whatsapp TEXT;
 
 CREATE TABLE IF NOT EXISTS etiquetas (
   id SERIAL PRIMARY KEY,

@@ -17,23 +17,30 @@ export type Conversa = {
   ultima_entrada_em: string | null;
 };
 
-// Telefone só com dígitos e DDI 55 (ex.: 5554999998888).
+// Telefone só com dígitos e DDI 55 (ex.: 5554999998888). Celular sem o 9 depois do DDD
+// (como o WhatsApp às vezes informa: 555499998888) ganha o 9, para o mesmo cliente não
+// virar dois contatos. Fixos começam com 2 a 5 e ficam como estão.
 export function normalizarTelefone(valor: string): string {
   let digitos = valor.replace(/\D/g, "");
   if (digitos.startsWith("0")) digitos = digitos.replace(/^0+/, "");
   if (digitos.length === 10 || digitos.length === 11) digitos = `55${digitos}`;
+  if (digitos.length === 12 && digitos.startsWith("55") && /[6-9]/.test(digitos[4])) {
+    digitos = `${digitos.slice(0, 4)}9${digitos.slice(4)}`;
+  }
   return digitos;
 }
 
-export async function obterContato(telefone: string, nome?: string) {
+// `whatsapp`: número como veio no webhook; quando existe, as respostas vão para ele.
+export async function obterContato(telefone: string, nome?: string, whatsapp?: string) {
   const tel = normalizarTelefone(telefone);
-  const contato = await sqlOne<{ id: number; nome: string | null }>(
-    `INSERT INTO contatos (telefone, nome) VALUES ($1, $2)
-     ON CONFLICT (telefone) DO UPDATE SET nome = COALESCE(contatos.nome, EXCLUDED.nome)
-     RETURNING id, nome`,
-    [tel, nome?.trim() || null],
+  const contato = await sqlOne<{ id: number; nome: string | null; whatsapp: string | null }>(
+    `INSERT INTO contatos (telefone, nome, whatsapp) VALUES ($1, $2, $3)
+     ON CONFLICT (telefone) DO UPDATE SET nome = COALESCE(contatos.nome, EXCLUDED.nome),
+       whatsapp = COALESCE(EXCLUDED.whatsapp, contatos.whatsapp)
+     RETURNING id, nome, whatsapp`,
+    [tel, nome?.trim() || null, whatsapp || null],
   );
-  return { id: contato!.id, telefone: tel, nome: contato!.nome };
+  return { id: contato!.id, telefone: tel, nome: contato!.nome, destino: contato!.whatsapp ?? tel };
 }
 
 export async function obterConversa(contatoId: number): Promise<Conversa> {
@@ -124,7 +131,7 @@ export async function receberMensagem(msg: {
   texto: string;
   opcaoId?: string;
 }) {
-  const contato = await obterContato(msg.de, msg.nome);
+  const contato = await obterContato(msg.de, msg.nome, msg.de.replace(/\D/g, ""));
   const conversa = await obterConversa(contato.id);
 
   const inserida = await sqlOne<{ id: number }>(
@@ -148,19 +155,28 @@ export async function receberMensagem(msg: {
   }
 
   if (conversa.status === "bot") {
-    await responderBot(conversa, contato.telefone, msg.texto, msg.opcaoId);
+    await responderBot(conversa, contato.destino, msg.texto, msg.opcaoId);
   }
 }
 
-export async function atualizarStatusMensagem(waId: string, status: string) {
-  await sql("UPDATE mensagens SET status = $2 WHERE wa_id = $1 AND direcao = 'saida'", [waId, status]);
+const STATUS_META: Record<string, string> = { sent: "enviada", delivered: "entregue", read: "lida", failed: "falhou" };
+
+export async function atualizarStatusMensagem(waId: string, status: string, erro?: string) {
+  const novo = STATUS_META[status] ?? status;
+  // Quando a entrega falha, o motivo vai junto no texto para a equipe ver no painel.
+  await sql(
+    `UPDATE mensagens SET status = $2,
+       texto = CASE WHEN $3::text IS NOT NULL THEN texto || E'\\n\\n⚠️ Não entregue: ' || $3 ELSE texto END
+     WHERE wa_id = $1 AND direcao = 'saida' AND status <> 'falhou'`,
+    [waId, novo, novo === "falhou" ? (erro ?? "motivo não informado") : null],
+  );
 }
 
 // ——— ações da equipe ———
 
 export async function responderComoAtendente(conversaId: number, usuarioId: number, texto: string) {
   const alvo = await sqlOne<{ telefone: string; ultima_entrada_em: string | null }>(
-    `SELECT ct.telefone, cv.ultima_entrada_em FROM conversas cv
+    `SELECT COALESCE(ct.whatsapp, ct.telefone) AS telefone, cv.ultima_entrada_em FROM conversas cv
      JOIN contatos ct ON ct.id = cv.contato_id WHERE cv.id = $1`,
     [conversaId],
   );
