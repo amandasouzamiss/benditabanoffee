@@ -45,7 +45,7 @@ export const site = {
 
   // Tema de Halloween (faixa no menu, selo no topo e seção do evento com a
   // Wizard). Mudar para false em 01/11.
-  halloween: true,
+  halloween: false,
 };
 
 export const navigation = [
