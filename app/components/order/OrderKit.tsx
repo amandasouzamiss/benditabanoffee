@@ -329,14 +329,37 @@ export function StepNav({
    Resumo final
 ———————————————————————————————————————————————— */
 
+// Grava a encomenda no painel de atendimento sem atrasar a abertura do WhatsApp.
+function registrarEncomenda(
+  encomenda: { tipo: "torta" | "cesta" | "evento"; nome: string; telefone: string },
+  rows: Array<{ label: string; value: string }>,
+) {
+  try {
+    const corpo = JSON.stringify({ ...encomenda, itens: rows });
+    const blob = new Blob([corpo], { type: "application/json" });
+    if (!navigator.sendBeacon?.("/api/encomendas", blob)) {
+      fetch("/api/encomendas", {
+        method: "POST",
+        body: corpo,
+        keepalive: true,
+        headers: { "Content-Type": "application/json" },
+      }).catch(() => {});
+    }
+  } catch {
+    // Se falhar, o pedido segue normalmente pelo WhatsApp.
+  }
+}
+
 export function SummaryCard({
   rows,
   whatsappUrl,
   onBack,
+  encomenda,
 }: {
   rows: Array<{ label: string; value: string }>;
   whatsappUrl: string;
   onBack: () => void;
+  encomenda?: { tipo: "torta" | "cesta" | "evento"; nome: string; telefone: string };
 }) {
   return (
     <div>
@@ -375,6 +398,7 @@ export function SummaryCard({
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => encomenda && registrarEncomenda(encomenda, rows)}
           className="group inline-flex min-h-14 w-full items-center justify-center gap-3 rounded-full bg-[#25D366] px-7 py-4 font-bold text-white shadow-[0_16px_40px_rgba(37,211,102,0.28)] transition duration-300 hover:-translate-y-0.5 hover:bg-[#20c45a] sm:w-auto"
         >
           Enviar encomenda pelo WhatsApp
